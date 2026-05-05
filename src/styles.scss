@@ -1,0 +1,137 @@
+@use '@angular/material' as mat;
+
+// ─── Brand Tokens ───────────────────────────────────────────
+:root {
+  --rg-orange:     #f7a427;
+  --rg-pink:       #f03e6e;
+  --rg-navy:       #1a2d5a;
+  --rg-navy-light: #2a3f7a;
+  --rg-bg:         #ffffff;
+  --rg-bg-soft:    #f9f9fb;
+  --rg-bg-hero:    linear-gradient(160deg, #fff5f7 0%, #fff9f0 50%, #f0f4ff 100%);
+  --rg-text:       #1a1a2e;
+  --rg-text-muted: #888888;
+  --rg-border:     #f0f0f5;
+  --rg-gradient:   linear-gradient(135deg, #f7a427, #f03e6e);
+  --rg-radius-sm:  8px;
+  --rg-radius-md:  16px;
+  --rg-radius-lg:  24px;
+  --rg-radius-xl:  50px;
+  --rg-shadow-sm:  0 2px 8px rgba(0,0,0,.06);
+  --rg-shadow-md:  0 4px 24px rgba(0,0,0,.10);
+  --rg-shadow-lg:  0 8px 40px rgba(0,0,0,.14);
+  --rg-font-head:  'Nunito', sans-serif;
+  --rg-font-body:  'Nunito Sans', sans-serif;
+  --rg-transition: all 0.2s ease;
+}
+
+// ─── Reset & Base ────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--rg-font-body);
+  background: var(--rg-bg);
+  color: var(--rg-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+
+// ─── Typography Helpers ──────────────────────────────────────
+.rg-display {
+  font-family: var(--rg-font-head);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.rg-orange { color: var(--rg-orange); }
+.rg-pink   { color: var(--rg-pink); }
+.rg-navy   { color: var(--rg-navy); }
+
+// ─── Button System ───────────────────────────────────────────
+.rg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--rg-radius-xl);
+  font-family: var(--rg-font-head);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: var(--rg-transition);
+  white-space: nowrap;
+
+  &-primary {
+    background: var(--rg-gradient);
+    color: #fff;
+    &:hover { opacity: .88; transform: translateY(-1px); box-shadow: var(--rg-shadow-md); }
+  }
+  &-dark {
+    background: var(--rg-navy);
+    color: #fff;
+    &:hover { background: var(--rg-navy-light); transform: translateY(-1px); }
+  }
+  &-outline {
+    background: transparent;
+    border: 2px solid var(--rg-navy);
+    color: var(--rg-navy);
+    &:hover { background: var(--rg-navy); color: #fff; }
+  }
+  &-white {
+    background: #fff;
+    color: var(--rg-navy);
+    border: 2px solid #fff;
+    &:hover { background: rgba(255,255,255,.9); }
+  }
+  &-lg { padding: 14px 36px; font-size: 15px; }
+  &-sm { padding: 8px 18px; font-size: 13px; }
+}
+
+// ─── Card ────────────────────────────────────────────────────
+.rg-card {
+  background: var(--rg-bg);
+  border-radius: var(--rg-radius-md);
+  border: 1px solid var(--rg-border);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+  &:hover { box-shadow: var(--rg-shadow-md); }
+}
+
+// ─── Section wrapper ─────────────────────────────────────────
+.rg-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rg-section-tag {
+  display: inline-block;
+  background: rgba(247,164,39,.15);
+  color: #d4780a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--rg-radius-xl);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: .6rem;
+}
+
+// ─── Utilities ───────────────────────────────────────────────
+.text-center { text-align: center; }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+// ─── Angular Material overrides ──────────────────────────────
+.mat-mdc-form-field {
+  width: 100%;
+  .mat-mdc-text-field-wrapper { border-radius: var(--rg-radius-md) !important; }
+}

@@ -1,0 +1,68 @@
+<div class="rg-auth">
+  <div class="rg-auth__panel">
+    <a routerLink="/" class="rg-auth__logo">
+      <div class="rg-auth__logo-icon"></div>
+      <span>Ruto<span class="pink">Go</span></span>
+    </a>
+    <h1 class="rg-auth__title rg-display">Crea tu cuenta</h1>
+    <p class="rg-auth__sub">Únete gratis y empieza a viajar de forma inteligente</p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="rg-auth__form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre completo</mat-label>
+        <input matInput formControlName="name" placeholder="Tu nombre">
+        <mat-icon matPrefix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="tu@email.com">
+        <mat-icon matPrefix>email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="showPass ? 'text' : 'password'" formControlName="password">
+        <mat-icon matPrefix>lock</mat-icon>
+        <mat-icon matSuffix (click)="showPass = !showPass" style="cursor:pointer">
+          {{ showPass ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>¿Cómo quieres usar RutoGo?</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="passenger">Solo pasajero</mat-option>
+          <mat-option value="driver">Solo conductor</mat-option>
+          <mat-option value="both">Pasajero y conductor</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>directions_car</mat-icon>
+      </mat-form-field>
+
+      <div *ngIf="error" class="rg-auth__error">{{ error }}</div>
+
+      <button type="submit" class="rg-btn rg-btn-primary rg-btn-lg rg-auth__submit"
+              [disabled]="loading || form.invalid">
+        <ng-container *ngIf="loading; else notLoading">
+          <mat-spinner diameter="20"></mat-spinner>
+        </ng-container>
+        <ng-template #notLoading>Crear cuenta gratis →</ng-template>
+      </button>
+    </form>
+
+    <p class="rg-auth__footer">
+      ¿Ya tienes cuenta? <a routerLink="/auth/login" class="rg-auth__link">Inicia sesión</a>
+    </p>
+  </div>
+
+  <div class="rg-auth__visual">
+    <div class="rg-auth__visual-content">
+      <div class="rg-auth__quote">"Tu próxima aventura está a un clic de distancia"</div>
+      <div class="rg-auth__trust">
+        <div class="rg-auth__trust-item">✓ Registro 100% gratuito</div>
+        <div class="rg-auth__trust-item">✓ Sin comisiones ocultas</div>
+        <div class="rg-auth__trust-item">✓ Conductores verificados</div>
+      </div>
+    </div>
+  </div>
+</div>

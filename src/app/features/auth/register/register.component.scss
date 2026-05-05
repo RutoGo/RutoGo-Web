@@ -1,0 +1,70 @@
+.rg-auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .rg-auth { grid-template-columns: 1fr; }
+}
+
+.rg-auth__panel {
+  padding: 2.5rem 2.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  max-width: 480px; margin: 0 auto; width: 100%;
+}
+
+.rg-auth__logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--rg-font-head); font-weight: 900; font-size: 1.3rem;
+  color: var(--rg-navy); text-decoration: none; margin-bottom: 2rem;
+}
+
+.rg-auth__logo .pink { color: var(--rg-pink); }
+
+.rg-auth__logo-icon {
+  width: 28px; height: 28px; background: var(--rg-gradient); border-radius: 50%;
+}
+
+.rg-auth__title { font-size: 1.8rem; color: var(--rg-navy); margin-bottom: .4rem; }
+.rg-auth__sub { font-size: 14px; color: #888; margin-bottom: 1.5rem; }
+.rg-auth__form {
+  display: flex; flex-direction: column; gap: .75rem;
+}
+
+.rg-auth__form mat-form-field { width: 100%; }
+
+.rg-auth__error {
+  background: rgba(240,62,110,.1); color: var(--rg-pink);
+  padding: .75rem 1rem; border-radius: 8px; font-size: 13px; font-weight: 600;
+}
+.rg-auth__submit { width: 100%; justify-content: center; margin-top: .5rem; }
+.rg-auth__footer { font-size: 13px; color: #888; text-align: center; margin-top: 1.5rem; }
+.rg-auth__link { color: var(--rg-pink); font-weight: 700; text-decoration: none; }
+.rg-auth__visual {
+  background: var(--rg-navy);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .rg-auth__visual { display: none; }
+}
+
+.rg-auth__visual::before {
+  content: '';
+  position: absolute; bottom: -80px; left: -80px;
+  width: 300px; height: 300px;
+  background: rgba(240,62,110,.1); border-radius: 50%;
+}
+
+.rg-auth__visual-content { text-align: center; padding: 2rem; position: relative; z-index: 1; }
+.rg-auth__quote {
+  font-family: var(--rg-font-head); font-size: 1.4rem; font-weight: 800;
+  color: #fff; margin-bottom: 2rem; line-height: 1.4;
+}
+.rg-auth__trust { display: flex; flex-direction: column; gap: .75rem; }
+.rg-auth__trust-item {
+  color: rgba(255,255,255,.7); font-size: 14px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px; justify-content: center;
+}
