@@ -1,7 +1,7 @@
 <div class="rg-auth">
   <div class="rg-auth__panel">
     <a routerLink="/" class="rg-auth__logo">
-      <div class="rg-auth__logo-icon"></div>
+      <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-auth__logo-icon" />
       <span>Ruto<span class="pink">Go</span></span>
     </a>
     <h1 class="rg-auth__title rg-display">Crea tu cuenta</h1>
@@ -18,6 +18,12 @@
         <mat-label>Correo electrónico</mat-label>
         <input matInput type="email" formControlName="email" placeholder="tu@email.com">
         <mat-icon matPrefix>email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <input matInput type="tel" formControlName="phone" placeholder="300 123 4567">
+        <mat-icon matPrefix>phone</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
@@ -48,6 +54,40 @@
         </ng-container>
         <ng-template #notLoading>Crear cuenta gratis →</ng-template>
       </button>
+
+      <div class="rg-auth__divider">
+        <span></span>
+        <span>o continuar con</span>
+        <span></span>
+      </div>
+
+      <div class="rg-auth__social-buttons">
+        <button mat-stroked-button type="button" class="rg-auth__social-btn rg-auth__social-btn--gmail">
+          <span class="rg-auth__social-icon rg-auth__social-icon--gmail" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.35 11.1h-9.17v2.84h5.28c-.23 1.28-1.4 3.76-5.28 3.76-3.18 0-5.78-2.62-5.78-5.85 0-3.23 2.6-5.85 5.78-5.85 1.81 0 3.02.78 3.71 1.45l2.53-2.46C18.12 3.17 15.98 2 12.18 2 6.7 2 2.35 6.37 2.35 11.65s4.35 9.65 9.83 9.65c5.66 0 9.4-3.98 9.4-9.63 0-.65-.07-1.14-.23-1.57Z" fill="#EA4335"/>
+            </svg>
+          </span>
+          Continuar con Gmail
+        </button>
+        <button mat-stroked-button type="button" class="rg-auth__social-btn rg-auth__social-btn--facebook">
+          <span class="rg-auth__social-icon rg-auth__social-icon--facebook" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12.07c0-5.49-4.45-9.94-9.94-9.94S2.12 6.58 2.12 12.07c0 4.95 3.61 9.06 8.32 9.85v-6.97h-2.5v-2.88h2.5V9.76c0-2.47 1.47-3.83 3.73-3.83 1.08 0 2.21.19 2.21.19v2.43h-1.25c-1.23 0-1.62.77-1.62 1.55v1.87h2.76l-.44 2.88h-2.32V21.9c4.71-.79 8.32-4.9 8.32-9.83Z" fill="#1877F2"/>
+            </svg>
+          </span>
+          Continuar con Facebook
+        </button>
+        <button mat-stroked-button type="button" class="rg-auth__social-btn rg-auth__social-btn--apple">
+          <span class="rg-auth__social-icon rg-auth__social-icon--apple" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.365 2.884c.183 1.984-1.147 3.925-2.5 4.15-1.016.168-2.36-.958-2.498-.985-.151-.03-1.94-1.006-1.955-2.908-.014-1.794 1.145-2.92 1.227-2.958 1.029-.582 2.252.346 2.425.37.175.024 1.844.653 2.301 2.407Z" fill="#000"/>
+              <path d="M18.77 8.36c-1.14-.23-2.44.645-3.06.645-.66 0-1.73-.61-2.84-.595-1.47.016-2.85.86-3.61 2.19-1.54 2.7-.39 6.7 1.1 8.91.74 1.09 1.62 2.32 2.78 2.27 1.11-.05 1.53-.72 2.87-.72 1.33 0 1.7.72 2.86.7 1.16-.02 1.89-1.08 2.62-2.18.83-1.24 1.17-2.45 1.18-2.51-.03-.01-2.24-.86-2.27-3.39-.02-1.95 1.58-2.9 1.66-2.95-.92-1.35-2.34-1.53-2.84-1.56Z" fill="#000"/>
+            </svg>
+          </span>
+          Continuar con Apple
+        </button>
+      </div>
     </form>
 
     <p class="rg-auth__footer">

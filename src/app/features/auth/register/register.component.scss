@@ -23,7 +23,7 @@
 .rg-auth__logo .pink { color: var(--rg-pink); }
 
 .rg-auth__logo-icon {
-  width: 28px; height: 28px; background: var(--rg-gradient); border-radius: 50%;
+  width: 32px; height: 32px; display: block; object-fit: contain; border-radius: 8px; background: transparent;
 }
 
 .rg-auth__title { font-size: 1.8rem; color: var(--rg-navy); margin-bottom: .4rem; }
@@ -39,6 +39,50 @@
   padding: .75rem 1rem; border-radius: 8px; font-size: 13px; font-weight: 600;
 }
 .rg-auth__submit { width: 100%; justify-content: center; margin-top: .5rem; }
+.rg-auth__divider {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: 1.5rem 0;
+  color: #888;
+  font-size: 13px;
+}
+.rg-auth__divider span:first-child,
+.rg-auth__divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+.rg-auth__social-buttons {
+  display: grid;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+.rg-auth__social-btn {
+  width: 100%;
+  justify-content: center;
+  text-transform: none;
+  color: var(--rg-navy);
+  border-color: #ddd;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+}
+.rg-auth__social-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.rg-auth__social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.rg-auth__social-btn--google { color: #000; }
+.rg-auth__social-btn--facebook { color: #1877f2; }
+.rg-auth__social-btn--apple { color: #000; }
 .rg-auth__footer { font-size: 13px; color: #888; text-align: center; margin-top: 1.5rem; }
 .rg-auth__link { color: var(--rg-pink); font-weight: 700; text-decoration: none; }
 .rg-auth__visual {

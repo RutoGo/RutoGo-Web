@@ -21,7 +21,7 @@ import { AuthService } from '../../../services/auth.service';
     <div class="rg-auth">
       <div class="rg-auth__panel">
         <a routerLink="/" class="rg-auth__logo">
-          <div class="rg-auth__logo-icon"></div>
+          <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-auth__logo-icon" />
           <span>Ruto<span class="pink">Go</span></span>
         </a>
         <h1 class="rg-auth__title rg-display">Bienvenido de nuevo</h1>
@@ -92,9 +92,11 @@ import { AuthService } from '../../../services/auth.service';
       .pink { color: var(--rg-pink); }
     }
     .rg-auth__logo-icon {
-      width: 28px; height: 28px;
-      background: var(--rg-gradient);
-      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: block;
+      object-fit: contain;
+      border-radius: 8px;
+      background: transparent;
     }
     .rg-auth__title { font-size: 1.8rem; color: var(--rg-navy); margin-bottom: .4rem; }
     .rg-auth__sub { font-size: 14px; color: #888; margin-bottom: 2rem; }

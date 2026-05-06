@@ -13,13 +13,7 @@ import { AuthService } from '../../../core/services/auth.service';
   template: `
     <nav class="rg-navbar">
       <a routerLink="/" class="rg-navbar__logo">
-        <div class="rg-navbar__logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.5" fill="none"/>
-            <path d="M8 8 Q12 10 12 12 Q12 14 16 16" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <circle cx="16" cy="16" r="2" fill="white"/>
-          </svg>
-        </div>
+        <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-navbar__logo-icon" />
         <span class="rg-navbar__logo-text">Ruto<span>Go</span></span>
       </a>
 
@@ -72,11 +66,11 @@ import { AuthService } from '../../../core/services/auth.service';
       text-decoration: none;
     }
     .rg-navbar__logo-icon {
-      width: 30px; height: 30px;
-      background: var(--rg-gradient);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      svg { width: 17px; height: 17px; }
+      width: 36px; height: 36px;
+      border-radius: 12px;
+      object-fit: contain;
+      display: block;
+      background: transparent;
     }
     .rg-navbar__logo-text {
       font-family: var(--rg-font-head);
