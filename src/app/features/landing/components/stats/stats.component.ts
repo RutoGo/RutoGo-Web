@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Stat { value: string; label: string; }
 
 @Component({
   selector: 'app-stats',
   standalone: true,
+  imports: [CommonModule],
   template: `
     <div class="rg-stats">
-      @for (stat of stats; track stat.label) {
-        <div class="rg-stats__card">
-          <div class="rg-stats__number">{{ stat.value }}</div>
-          <div class="rg-stats__label">{{ stat.label }}</div>
-        </div>
-      }
+      <div *ngFor="let stat of stats" class="rg-stats__card">
+        <div class="rg-stats__number">{{ stat.value }}</div>
+        <div class="rg-stats__label">{{ stat.label }}</div>
+      </div>
     </div>
   `,
   styles: [`

@@ -30,7 +30,7 @@ import { AuthService } from '../../../core/services/auth.service';
       </div>
 
       <div class="rg-navbar__actions">
-        @if (auth.isLoggedIn()) {
+        <ng-container *ngIf="auth.isLoggedIn(); else guestLinks">
           <button mat-icon-button [matMenuTriggerFor]="userMenu">
             <div class="rg-navbar__avatar">{{ auth.user()?.name?.charAt(0) }}</div>
           </button>
@@ -42,10 +42,12 @@ import { AuthService } from '../../../core/services/auth.service';
               <mat-icon>logout</mat-icon> Cerrar sesión
             </button>
           </mat-menu>
-        } @else {
+        </ng-container>
+
+        <ng-template #guestLinks>
           <a routerLink="/auth/login" class="rg-navbar__link rg-navbar__link--login">Iniciar Sesión</a>
           <a routerLink="/auth/register" class="rg-btn rg-btn-primary rg-btn-sm">Registrarse</a>
-        }
+        </ng-template>
       </div>
     </nav>
   `,
