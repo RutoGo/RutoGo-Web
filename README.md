@@ -4,6 +4,10 @@ Plataforma de carpooling para Colombia, construida con **Angular 18** + **Angula
 
 ---
 
+<p align="center">
+  <img src="./src/assets/images/rutogo-screenshot.png" width="600" alt="RutoGo">
+</p>
+
 ## 🚀 Inicio rápido
 
 ### Requisitos previos
