@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Benefit { icon: string; color: string; title: string; desc: string; }
 
 @Component({
   selector: 'app-benefits',
   standalone: true,
+  imports: [CommonModule],
   template: `
     <section class="rg-section text-center">
       <div class="rg-section-tag">Beneficios</div>
@@ -14,13 +16,11 @@ interface Benefit { icon: string; color: string; title: string; desc: string; }
       <p class="rg-benefits__sub">Más que una app de viajes, somos una comunidad que transforma tu forma de moverte</p>
 
       <div class="rg-benefits__grid">
-        @for (b of benefits; track b.title) {
-          <div class="rg-card rg-benefits__card">
-            <div class="rg-benefits__icon" [style.background]="b.color">{{ b.icon }}</div>
-            <h4 class="rg-benefits__card-title">{{ b.title }}</h4>
-            <p class="rg-benefits__card-desc">{{ b.desc }}</p>
-          </div>
-        }
+        <div *ngFor="let b of benefits" class="rg-card rg-benefits__card">
+          <div class="rg-benefits__icon" [style.background]="b.color">{{ b.icon }}</div>
+          <h4 class="rg-benefits__card-title">{{ b.title }}</h4>
+          <p class="rg-benefits__card-desc">{{ b.desc }}</p>
+        </div>
       </div>
     </section>
   `,

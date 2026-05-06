@@ -43,17 +43,12 @@ import { AuthService } from '../../../services/auth.service';
             </mat-icon>
           </mat-form-field>
 
-          @if (error) {
-            <div class="rg-auth__error">{{ error }}</div>
-          }
+          <div *ngIf="error" class="rg-auth__error">{{ error }}</div>
 
           <button type="submit" class="rg-btn rg-btn-primary rg-btn-lg rg-auth__submit"
                   [disabled]="loading || form.invalid">
-            @if (loading) {
-              <mat-spinner diameter="20" />
-            } @else {
-              Iniciar sesión →
-            }
+            <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+            <span *ngIf="!loading">Iniciar sesión →</span>
           </button>
         </form>
 

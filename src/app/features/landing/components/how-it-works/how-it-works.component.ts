@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Step { num: string; icon: string; color: string; title: string; desc: string; }
 
 @Component({
   selector: 'app-how-it-works',
   standalone: true,
+  imports: [CommonModule],
   template: `
     <div class="rg-how">
       <div class="text-center rg-how__header">
@@ -19,16 +21,14 @@ interface Step { num: string; icon: string; color: string; title: string; desc: 
 
       <div class="rg-how__steps">
         <div class="rg-how__line"></div>
-        @for (step of steps; track step.num) {
-          <div class="rg-how__step">
-            <div class="rg-how__icon-wrap" [style.background]="step.color">
-              <div class="rg-how__step-num">{{ step.num }}</div>
-              <div class="rg-how__icon">{{ step.icon }}</div>
-            </div>
-            <h4 class="rg-how__step-title">{{ step.title }}</h4>
-            <p class="rg-how__step-desc">{{ step.desc }}</p>
+        <div *ngFor="let step of steps" class="rg-how__step">
+          <div class="rg-how__icon-wrap" [style.background]="step.color">
+            <div class="rg-how__step-num">{{ step.num }}</div>
+            <div class="rg-how__icon">{{ step.icon }}</div>
           </div>
-        }
+          <h4 class="rg-how__step-title">{{ step.title }}</h4>
+          <p class="rg-how__step-desc">{{ step.desc }}</p>
+        </div>
       </div>
     </div>
   `,
