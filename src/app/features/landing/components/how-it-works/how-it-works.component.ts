@@ -103,11 +103,11 @@ interface Step { num: string; icon: string; color: string; title: string; desc: 
 })
 export class HowItWorksComponent {
   steps: Step[] = [
-    { num: '01', icon: '📍', color: '#f7a427', title: 'Busca tu ruta',
+    { num: '01', icon: '📍', color: '#FF7A00', title: 'Busca tu ruta',
       desc: 'Ingresa origen, destino y fecha. Encuentra cientos de opciones disponibles' },
-    { num: '02', icon: '📅', color: '#f03e6e', title: 'Reserva tu viaje',
+    { num: '02', icon: '📅', color: '#4B1FA3', title: 'Reserva tu viaje',
       desc: 'Elige al conductor que mejor se adapte a ti, reserva y confirma en segundos' },
-    { num: '03', icon: '🚗', color: '#1a2d5a', title: '¡A viajar!',
+    { num: '03', icon: '🚗', color: '#1E1E1E', title: '¡A viajar!',
       desc: 'Sube al auto, disfruta el viaje y comparte una experiencia inolvidable' }
   ];
 }

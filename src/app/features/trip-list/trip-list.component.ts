@@ -91,7 +91,7 @@ import { Trip } from '../../core/models/trip.model';
      .rg-search-grid mat-form-field { width: 100%; }
      .rg-search-grid ::ng-deep .mat-mdc-form-field-flex { background: #ffffff !important; }
      .rg-search-grid ::ng-deep .mat-mdc-form-field-outline { border-color: rgba(0,0,0,.16) !important; }
-     .rg-search-grid ::ng-deep .mat-mdc-form-field-infix, .rg-search-grid ::ng-deep input.mat-mdc-text-field-input, .rg-search-grid ::ng-deep .mat-mdc-select-trigger { color: #1a2d5a !important; }
+     .rg-search-grid ::ng-deep .mat-mdc-form-field-infix, .rg-search-grid ::ng-deep input.mat-mdc-text-field-input, .rg-search-grid ::ng-deep .mat-mdc-select-trigger { color: var(--rg-navy) !important; }
      .rg-search-grid ::ng-deep .mat-mdc-form-field-label { color: rgba(0,0,0,.75) !important; }
      .rg-search-button { grid-column: span 1; width: 100%; height: 48px; background: #ffffff !important; color: var(--rg-navy) !important; border: 1px solid var(--rg-navy) !important; }
      .rg-book-button { width: 100%; background: #ffffff !important; color: var(--rg-navy) !important; border: 1px solid var(--rg-navy) !important; }

@@ -51,7 +51,7 @@ import { RouterLink } from '@angular/router';
         position: absolute;
         bottom: -70px; left: -50px;
         width: 180px; height: 180px;
-        background: rgba(240,62,110,.1);
+        background: rgba(75,31,163,.12);
         border-radius: 50%;
         pointer-events: none;
       }

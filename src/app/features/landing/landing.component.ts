@@ -38,7 +38,6 @@ import { CtaComponent } from './components/cta/cta.component';
     <app-navbar />
     <main>
       <app-hero />
-      <app-stats />
 
       <section class="rg-landing-search-section">
         <div class="rg-landing-search-shell">
@@ -70,12 +69,13 @@ import { CtaComponent } from './components/cta/cta.component';
             </mat-form-field>
 
             <button mat-flat-button color="primary" class="rg-landing-search-button" type="submit">
-              Buscar viaje
+              Buscar viaje →
             </button>
           </form>
         </div>
       </section>
 
+      <app-stats />
       <app-benefits />
       <app-trips-preview />
       <app-how-it-works />
@@ -86,10 +86,33 @@ import { CtaComponent } from './components/cta/cta.component';
   styles: [
     `.rg-landing-search-section { padding: 2rem 2.5rem; background: #f6f8ff; }
      .rg-landing-search-shell { max-width: 1100px; margin: 0 auto; }
-     .rg-landing-search-shell h2 { font-size: clamp(1.6rem, 2.7vw, 2.3rem); margin-bottom: 1rem; color: var(--rg-navy); }
+     .rg-landing-search-shell h2 {
+       font-size: clamp(2rem, 3vw, 2.8rem);
+       margin-bottom: 1.2rem;
+       color: var(--rg-navy);
+       font-weight: 900;
+       letter-spacing: -0.03em;
+       line-height: 1.05;
+     }
      .rg-landing-search-form { display: grid; gap: 1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; }
      .rg-landing-search-form mat-form-field { width: 100%; }
-     .rg-landing-search-button { width: 100%; height: 50px; }
+     .rg-landing-search-button {
+       width: 100%;
+       max-width: 260px;
+       grid-column: 1 / -1;
+       justify-self: center;
+       height: 52px;
+       border-radius: 999px;
+       background: linear-gradient(135deg, var(--rg-orange), var(--rg-pink));
+       color: #fff !important;
+       font-weight: 800;
+       box-shadow: 0 14px 40px rgba(75,31,163,.18);
+       transition: transform .2s ease, filter .2s ease;
+     }
+     .rg-landing-search-button:hover {
+       transform: translateY(-1px);
+       filter: brightness(1.03);
+     }
      @media (max-width: 960px) { .rg-landing-search-form { grid-template-columns: 1fr; } }
     `
   ]

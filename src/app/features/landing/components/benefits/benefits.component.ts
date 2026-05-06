@@ -73,11 +73,11 @@ interface Benefit { icon: string; color: string; title: string; desc: string; }
 })
 export class BenefitsComponent {
   benefits: Benefit[] = [
-    { icon: '💰', color: '#f7a427', title: 'Ahorra dinero',
+    { icon: '💰', color: '#FF7A00', title: 'Ahorra dinero',
       desc: 'Reduce tus costos de viaje hasta un 70% compartiendo gastos de combustible y peajes' },
-    { icon: '🛡️', color: '#1a2d5a', title: 'Viaja seguro',
+    { icon: '🛡️', color: '#1E1E1E', title: 'Viaja seguro',
       desc: 'Conductores verificados, valoraciones de usuarios y seguimiento en tiempo real de cada viaje' },
-    { icon: '👥', color: '#f03e6e', title: 'Comunidad increíble',
+    { icon: '👥', color: '#4B1FA3', title: 'Comunidad increíble',
       desc: 'Conoce personas geniales, comparte experiencias y haz amigos en cada trayecto' }
   ];
 }

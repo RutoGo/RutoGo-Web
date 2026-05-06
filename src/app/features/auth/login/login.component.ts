@@ -105,7 +105,7 @@ import { AuthService } from '../../../services/auth.service';
       mat-form-field { width: 100%; }
     }
     .rg-auth__error {
-      background: rgba(240,62,110,.1);
+      background: rgba(75,31,163,.1);
       color: var(--rg-pink);
       padding: .75rem 1rem;
       border-radius: 8px;
