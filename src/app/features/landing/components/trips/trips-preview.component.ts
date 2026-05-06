@@ -19,30 +19,26 @@ import { Trip } from '../../../../core/models/trip.model';
       </div>
 
       <div class="rg-trips__grid">
-        @for (trip of trips; track trip.id) {
-          <div class="rg-trips__card">
-            <div class="rg-trips__card-header">
-              <div class="rg-trips__route">{{ trip.origin }} → {{ trip.destination }}</div>
-              <div class="rg-trips__badge">{{ trip.rating }}★</div>
-            </div>
-            <div class="rg-trips__meta">{{ trip.date }} · {{ trip.time }} · {{ trip.duration }}</div>
-
-            <div class="rg-trips__seats">
-              @for (seat of getSeatArray(trip); track $index) {
-                <div class="rg-trips__seat" [class.taken]="!seat"></div>
-              }
-              <span class="rg-trips__seats-label">{{ trip.seatsAvailable }} asiento(s) libre(s)</span>
-            </div>
-
-            <div class="rg-trips__footer">
-              <div class="rg-trips__price">{{ trip.price | currency:'COP':'symbol':'1.0-0' }}</div>
-              <div class="rg-trips__avatar" [style.background]="getAvatarColor($index)">
-                {{ trip.driver.initials }}
-              </div>
-              <div class="rg-trips__stars">⭐ {{ trip.rating }}</div>
-            </div>
+        <div *ngFor="let trip of trips; let i = index" class="rg-trips__card">
+          <div class="rg-trips__card-header">
+            <div class="rg-trips__route">{{ trip.origin }} → {{ trip.destination }}</div>
+            <div class="rg-trips__badge">{{ trip.rating }}★</div>
           </div>
-        }
+          <div class="rg-trips__meta">{{ trip.date }} · {{ trip.time }} · {{ trip.duration }}</div>
+
+          <div class="rg-trips__seats">
+            <div *ngFor="let seat of getSeatArray(trip); let j = index" class="rg-trips__seat" [class.taken]="!seat"></div>
+            <span class="rg-trips__seats-label">{{ trip.seatsAvailable }} asiento(s) libre(s)</span>
+          </div>
+
+          <div class="rg-trips__footer">
+            <div class="rg-trips__price">{{ trip.price | currency:'COP':'symbol':'1.0-0' }}</div>
+            <div class="rg-trips__avatar" [style.background]="getAvatarColor(i)">
+              {{ trip.driver.initials }}
+            </div>
+            <div class="rg-trips__stars">⭐ {{ trip.rating }}</div>
+          </div>
+        </div>
       </div>
 
       <div class="rg-trips__cta">

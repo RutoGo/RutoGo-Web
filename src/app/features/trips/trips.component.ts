@@ -67,8 +67,8 @@ import { Trip } from '../../core/models/trip.model';
         </div>
 
         <div class="rg-trips-page__list">
-          @for (trip of trips; track trip.id) {
-            <div class="rg-trips-page__card">
+          <ng-container *ngIf="trips.length > 0; else noTrips">
+            <div *ngFor="let trip of trips" class="rg-trips-page__card">
               <div class="rg-trips-page__card-left">
                 <div class="rg-trips-page__route">{{ trip.origin }} → {{ trip.destination }}</div>
                 <div class="rg-trips-page__meta">{{ trip.date }} · {{ trip.time }} · {{ trip.duration }}</div>
@@ -78,7 +78,7 @@ import { Trip } from '../../core/models/trip.model';
                     <div class="rg-trips-page__driver-name">{{ trip.driver.name }}</div>
                     <div class="rg-trips-page__driver-meta">
                       ⭐ {{ trip.driver.rating }} · {{ trip.driver.trips }} viajes
-                      @if (trip.driver.verified) { <span class="rg-trips-page__verified">✓ Verificado</span> }
+                      <span *ngIf="trip.driver.verified" class="rg-trips-page__verified">✓ Verificado</span>
                     </div>
                   </div>
                 </div>
@@ -89,12 +89,14 @@ import { Trip } from '../../core/models/trip.model';
                 <button class="rg-btn rg-btn-primary rg-btn-sm">Reservar →</button>
               </div>
             </div>
-          } @empty {
+          </ng-container>
+
+          <ng-template #noTrips>
             <div class="rg-trips-page__empty">
               <div style="font-size:3rem">🚗</div>
               <p>No encontramos viajes para esta ruta.<br>¡Intenta con otra búsqueda!</p>
             </div>
-          }
+          </ng-template>
         </div>
       </div>
     </div>

@@ -28,13 +28,11 @@ import { AuthService } from '../../core/services/auth.service';
 
         <!-- Quick stats -->
         <div class="rg-dash__stats">
-          @for (stat of stats; track stat.label) {
-            <div class="rg-dash__stat-card" [style.border-top-color]="stat.color">
-              <div class="rg-dash__stat-icon" [style.color]="stat.color">{{ stat.icon }}</div>
-              <div class="rg-dash__stat-value">{{ stat.value }}</div>
-              <div class="rg-dash__stat-label">{{ stat.label }}</div>
-            </div>
-          }
+          <div *ngFor="let stat of stats" class="rg-dash__stat-card" [style.border-top-color]="stat.color">
+            <div class="rg-dash__stat-icon" [style.color]="stat.color">{{ stat.icon }}</div>
+            <div class="rg-dash__stat-value">{{ stat.value }}</div>
+            <div class="rg-dash__stat-label">{{ stat.label }}</div>
+          </div>
         </div>
 
         <!-- Quick actions -->
