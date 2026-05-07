@@ -2,17 +2,17 @@
 
 // ─── Brand Tokens ───────────────────────────────────────────
 :root {
-  --rg-orange:     #f7a427;
-  --rg-pink:       #f03e6e;
-  --rg-navy:       #1a2d5a;
-  --rg-navy-light: #2a3f7a;
-  --rg-bg:         #ffffff;
-  --rg-bg-soft:    #f9f9fb;
-  --rg-bg-hero:    linear-gradient(160deg, #fff5f7 0%, #fff9f0 50%, #f0f4ff 100%);
-  --rg-text:       #1a1a2e;
+  --rg-orange:     #FF7A00;
+  --rg-pink:       #4B1FA3;
+  --rg-navy:       #1E1E1E;
+  --rg-navy-light: #373737;
+  --rg-bg:         #FFFFFF;
+  --rg-bg-soft:    #f7f3ff;
+  --rg-bg-hero:    linear-gradient(160deg, #ffffff 0%, #f5f1ff 40%, #fff4ea 100%);
+  --rg-text:       #1E1E1E;
   --rg-text-muted: #888888;
-  --rg-border:     #f0f0f5;
-  --rg-gradient:   linear-gradient(135deg, #f7a427, #f03e6e);
+  --rg-border:     #e8e5f1;
+  --rg-gradient:   linear-gradient(135deg, #FF7A00, #4B1FA3);
   --rg-radius-sm:  8px;
   --rg-radius-md:  16px;
   --rg-radius-lg:  24px;
@@ -112,8 +112,8 @@ a { text-decoration: none; color: inherit; }
 
 .rg-section-tag {
   display: inline-block;
-  background: rgba(247,164,39,.15);
-  color: #d4780a;
+  background: rgba(255,122,0,.14);
+  color: #cc6800;
   font-size: 11px;
   font-weight: 700;
   padding: 4px 14px;

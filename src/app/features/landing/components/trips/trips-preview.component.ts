@@ -146,7 +146,7 @@ export class TripsPreviewComponent implements OnInit {
   private tripService = inject(TripService);
   trips: Trip[] = [];
 
-  private avatarColors = ['linear-gradient(135deg,#f7a427,#f03e6e)', '#1a2d5a', '#f03e6e', '#f7a427'];
+  private avatarColors = ['linear-gradient(135deg,#FF7A00,#4B1FA3)', '#1E1E1E', '#4B1FA3', '#FF7A00'];
 
   ngOnInit(): void {
     this.tripService.getFeaturedTrips().subscribe(t => this.trips = t);

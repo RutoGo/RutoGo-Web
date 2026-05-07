@@ -35,7 +35,7 @@ import { RouterLink } from '@angular/router';
         position: absolute;
         top: -80px; right: -80px;
         width: 300px; height: 300px;
-        background: rgba(247,164,39,.08);
+        background: rgba(255,122,0,.08);
         border-radius: 50%;
         pointer-events: none;
       }
@@ -44,14 +44,14 @@ import { RouterLink } from '@angular/router';
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(240,62,110,.1);
+      background: rgba(75,31,163,.1);
       color: var(--rg-pink);
       font-size: 13px;
       font-weight: 700;
       padding: 7px 18px;
       border-radius: 50px;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba(240,62,110,.2);
+      border: 1px solid rgba(75,31,163,.2);
     }
     .rg-hero__title {
       font-size: clamp(2.4rem, 5vw, 3.5rem);

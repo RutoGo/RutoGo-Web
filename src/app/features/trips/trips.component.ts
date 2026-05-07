@@ -116,7 +116,7 @@ import { Trip } from '../../core/models/trip.model';
       max-width: 1100px;
       margin: 0 auto;
       mat-form-field { flex: 1; min-width: 160px;
-        ::ng-deep .mat-mdc-form-field-flex { background: rgba(255,255,255,.08); }
+        ::ng-deep .mat-mdc-form-field-flex { background: rgb(227, 231, 240); }
         ::ng-deep label, ::ng-deep input { color: #fff !important; }
         ::ng-deep .mat-icon { color: rgba(255,255,255,.6) !important; }
       }

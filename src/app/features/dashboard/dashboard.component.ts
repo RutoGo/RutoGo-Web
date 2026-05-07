@@ -39,17 +39,17 @@ import { AuthService } from '../../core/services/auth.service';
         <h2 class="rg-dash__section-title rg-display">Acciones rápidas</h2>
         <div class="rg-dash__actions">
           <a routerLink="/viajes" class="rg-dash__action-card">
-            <div class="rg-dash__action-icon" style="background:#f7a427">🔍</div>
+            <div class="rg-dash__action-icon" style="background:#FF7A00">🔍</div>
             <div class="rg-dash__action-title">Buscar viaje</div>
             <div class="rg-dash__action-desc">Encuentra tu próxima ruta</div>
           </a>
           <div class="rg-dash__action-card">
-            <div class="rg-dash__action-icon" style="background:#f03e6e">➕</div>
+            <div class="rg-dash__action-icon" style="background:#4B1FA3">➕</div>
             <div class="rg-dash__action-title">Publicar viaje</div>
             <div class="rg-dash__action-desc">Ofrece tu ruta y gana</div>
           </div>
           <div class="rg-dash__action-card">
-            <div class="rg-dash__action-icon" style="background:#1a2d5a">📋</div>
+            <div class="rg-dash__action-icon" style="background:#1E1E1E">📋</div>
             <div class="rg-dash__action-title">Mis reservas</div>
             <div class="rg-dash__action-desc">Historial de viajes</div>
           </div>
@@ -128,9 +128,9 @@ export class DashboardComponent {
   auth = inject(AuthService);
 
   stats = [
-    { icon: '✈️', value: '0',   label: 'Viajes realizados', color: '#f7a427' },
-    { icon: '⭐', value: '—',   label: 'Mi valoración',      color: '#f03e6e' },
+    { icon: '✈️', value: '0',   label: 'Viajes realizados', color: '#FF7A00' },
+    { icon: '⭐', value: '—',   label: 'Mi valoración',      color: '#4B1FA3' },
     { icon: '💰', value: '$0',  label: 'Ahorrado',           color: '#2d9e60' },
-    { icon: '👥', value: '0',   label: 'Compañeros',         color: '#1a2d5a' }
+    { icon: '👥', value: '0',   label: 'Compañeros',         color: '#1E1E1E' }
   ];
 }

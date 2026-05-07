@@ -88,14 +88,19 @@ import { Trip } from '../../core/models/trip.model';
   styles: [
     `.rg-page-shell { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
      .rg-search-grid { display: grid; gap: 1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; }
-     .rg-search-button { grid-column: span 1; width: 100%; height: 48px; }
+     .rg-search-grid mat-form-field { width: 100%; }
+     .rg-search-grid ::ng-deep .mat-mdc-form-field-flex { background: #ffffff !important; }
+     .rg-search-grid ::ng-deep .mat-mdc-form-field-outline { border-color: rgba(0,0,0,.16) !important; }
+     .rg-search-grid ::ng-deep .mat-mdc-form-field-infix, .rg-search-grid ::ng-deep input.mat-mdc-text-field-input, .rg-search-grid ::ng-deep .mat-mdc-select-trigger { color: var(--rg-navy) !important; }
+     .rg-search-grid ::ng-deep .mat-mdc-form-field-label { color: rgba(0,0,0,.75) !important; }
+     .rg-search-button { grid-column: span 1; width: 100%; height: 48px; background: #ffffff !important; color: var(--rg-navy) !important; border: 1px solid var(--rg-navy) !important; }
+     .rg-book-button { width: 100%; background: #ffffff !important; color: var(--rg-navy) !important; border: 1px solid var(--rg-navy) !important; }
      .rg-results-header { display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; }
      .rg-card-grid { display: grid; gap: 1rem; }
      .rg-trip-card { padding: 1rem; }
      .rg-card-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
      .rg-price { font-size: 1.4rem; font-weight: 800; color: #d81b60; }
      .rg-card-body { color: #535353; font-size: .95rem; margin-bottom: 1rem; }
-     .rg-book-button { width: 100%; }
      @media (max-width: 960px) { .rg-search-grid { grid-template-columns: 1fr; } }
     `
   ]
