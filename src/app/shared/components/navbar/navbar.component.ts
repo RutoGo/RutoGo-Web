@@ -14,7 +14,7 @@ import { AuthService } from '../../../core/services/auth.service';
     <nav class="rg-navbar">
       <a routerLink="/" class="rg-navbar__logo">
         <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-navbar__logo-icon" />
-        <span class="rg-navbar__logo-text">Ruto<span>Go</span></span>
+        <span class="rg-navbar__logo-text"><span class="rg-pink">Ruto</span><span class="rg-orange">Go</span></span>
       </a>
 
       <div class="rg-navbar__links">
@@ -62,11 +62,11 @@ import { AuthService } from '../../../core/services/auth.service';
     .rg-navbar__logo {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       text-decoration: none;
     }
     .rg-navbar__logo-icon {
-      width: 36px; height: 36px;
+      width: 42px; height: 42px;
       border-radius: 12px;
       object-fit: contain;
       display: block;
@@ -75,10 +75,11 @@ import { AuthService } from '../../../core/services/auth.service';
     .rg-navbar__logo-text {
       font-family: var(--rg-font-head);
       font-weight: 900;
-      font-size: 1.3rem;
+      font-size: 1.45rem;
       color: var(--rg-navy);
-      span { color: var(--rg-pink); }
     }
+    .rg-navbar__logo-text .rg-pink { color: var(--rg-pink); }
+    .rg-navbar__logo-text .rg-orange { color: var(--rg-orange); }
     .rg-navbar__links {
       display: flex;
       align-items: center;

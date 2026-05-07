@@ -22,7 +22,7 @@ import { AuthService } from '../../../services/auth.service';
       <div class="rg-auth__panel">
         <a routerLink="/" class="rg-auth__logo">
           <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-auth__logo-icon" />
-          <span>Ruto<span class="pink">Go</span></span>
+          <span><span class="rg-pink">Ruto</span><span class="rg-orange">Go</span></span>
         </a>
         <h1 class="rg-auth__title rg-display">Bienvenido de nuevo</h1>
         <p class="rg-auth__sub">Inicia sesión para continuar tu aventura</p>
@@ -59,6 +59,7 @@ import { AuthService } from '../../../services/auth.service';
 
       <div class="rg-auth__visual">
         <div class="rg-auth__visual-content">
+          <div class="rg-auth__visual-title">Nuestros indicadores</div>
           <div class="rg-auth__quote">"Compartir el camino hace el viaje más rico"</div>
           <div class="rg-auth__visual-stats">
             <div><span>500K+</span> Viajeros</div>
@@ -86,16 +87,17 @@ import { AuthService } from '../../../services/auth.service';
       width: 100%;
     }
     .rg-auth__logo {
-      display: flex; align-items: center; gap: 8px;
-      font-family: var(--rg-font-head); font-weight: 900; font-size: 1.3rem;
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--rg-font-head); font-weight: 900; font-size: 1.6rem;
       color: var(--rg-navy); text-decoration: none; margin-bottom: 2.5rem;
-      .pink { color: var(--rg-pink); }
     }
+    .rg-auth__logo .rg-pink { color: var(--rg-pink); }
+    .rg-auth__logo .rg-orange { color: var(--rg-orange); }
     .rg-auth__logo-icon {
-      width: 32px; height: 32px;
+      width: 42px; height: 42px;
       display: block;
       object-fit: contain;
-      border-radius: 8px;
+      border-radius: 10px;
       background: transparent;
     }
     .rg-auth__title { font-size: 1.8rem; color: var(--rg-navy); margin-bottom: .4rem; }
@@ -133,6 +135,15 @@ import { AuthService } from '../../../services/auth.service';
     }
     .rg-auth__visual-content {
       text-align: center; padding: 2rem; position: relative; z-index: 1;
+    }
+    .rg-auth__visual-title {
+      font-family: var(--rg-font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.85);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      margin-bottom: .75rem;
     }
     .rg-auth__quote {
       font-family: var(--rg-font-head);

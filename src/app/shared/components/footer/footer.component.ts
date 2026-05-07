@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
     <footer class="rg-footer">
       <div class="rg-footer__logo">
         <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-footer__logo-icon" />
-        <span class="rg-footer__logo-text">Ruto<span>Go</span></span>
+        <span class="rg-footer__logo-text"><span class="rg-pink">Ruto</span><span class="rg-orange">Go</span></span>
       </div>
       <div class="rg-footer__links">
         <a class="rg-footer__link">Sobre nosotros</a>
@@ -31,20 +31,21 @@ import { RouterLink } from '@angular/router';
       border-top: 1px solid var(--rg-border);
     }
     .rg-footer__logo {
-      display: flex; align-items: center; gap: 7px;
+      display: flex; align-items: center; gap: 8px;
     }
     .rg-footer__logo-icon {
-      width: 28px; height: 28px;
+      width: 34px; height: 34px;
       display: block;
       object-fit: contain;
     }
     .rg-footer__logo-text {
       font-family: var(--rg-font-head);
       font-weight: 900;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: var(--rg-navy);
-      span { color: var(--rg-pink); }
     }
+    .rg-footer__logo-text .rg-pink { color: var(--rg-pink); }
+    .rg-footer__logo-text .rg-orange { color: var(--rg-orange); }
     .rg-footer__links {
       display: flex;
       gap: 1.5rem;

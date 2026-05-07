@@ -41,7 +41,10 @@ import { CtaComponent } from './components/cta/cta.component';
 
       <section class="rg-landing-search-section">
         <div class="rg-landing-search-shell">
-          <h2>Busca el viaje ideal</h2>
+          <div class="rg-landing-search-title-wrap">
+            <span class="rg-landing-search-tag">RUTAS DESTACADAS</span>
+            <h2>Viajes <span class="rg-landing-search-highlight">disponibles</span> hoy</h2>
+          </div>
           <form class="rg-landing-search-form" (submit)="goToTrips()">
             <mat-form-field appearance="outline">
               <mat-label>Origen</mat-label>
@@ -86,13 +89,35 @@ import { CtaComponent } from './components/cta/cta.component';
   styles: [
     `.rg-landing-search-section { padding: 2rem 2.5rem; background: #f6f8ff; }
      .rg-landing-search-shell { max-width: 1100px; margin: 0 auto; }
+     .rg-landing-search-title-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; margin-bottom: 1rem; }
+     .rg-landing-search-tag {
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       padding: 6px 14px;
+       border-radius: 999px;
+       background: rgba(255,122,0,.12);
+       color: var(--rg-orange);
+       font-size: 12px;
+       font-weight: 700;
+       letter-spacing: .15em;
+       text-transform: uppercase;
+     }
      .rg-landing-search-shell h2 {
-       font-size: clamp(2rem, 3vw, 2.8rem);
-       margin-bottom: 1.2rem;
+       font-size: clamp(2rem, 3vw, 3rem);
+       margin: 0;
        color: var(--rg-navy);
        font-weight: 900;
-       letter-spacing: -0.03em;
-       line-height: 1.05;
+       letter-spacing: -0.04em;
+       line-height: 1.04;
+     }
+     .rg-landing-search-highlight {
+       background: linear-gradient(135deg, var(--rg-orange), var(--rg-pink));
+       -webkit-background-clip: text;
+       color: transparent;
+       text-decoration: underline;
+       text-decoration-color: rgba(255,122,0,.65);
+       text-underline-offset: 0.5rem;
      }
      .rg-landing-search-form { display: grid; gap: 1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; }
      .rg-landing-search-form mat-form-field { width: 100%; }

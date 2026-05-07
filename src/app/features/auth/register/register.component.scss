@@ -15,15 +15,16 @@
 }
 
 .rg-auth__logo {
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--rg-font-head); font-weight: 900; font-size: 1.3rem;
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--rg-font-head); font-weight: 900; font-size: 1.6rem;
   color: var(--rg-navy); text-decoration: none; margin-bottom: 2rem;
 }
 
-.rg-auth__logo .pink { color: var(--rg-pink); }
+.rg-auth__logo .rg-pink { color: var(--rg-pink); }
+.rg-auth__logo .rg-orange { color: var(--rg-orange); }
 
 .rg-auth__logo-icon {
-  width: 32px; height: 32px; display: block; object-fit: contain; border-radius: 8px; background: transparent;
+  width: 42px; height: 42px; display: block; object-fit: contain; border-radius: 10px; background: transparent;
 }
 
 .rg-auth__title { font-size: 1.8rem; color: var(--rg-navy); margin-bottom: .4rem; }
