@@ -8,14 +8,8 @@ import { RouterLink } from '@angular/router';
   template: `
     <footer class="rg-footer">
       <div class="rg-footer__logo">
-        <div class="rg-footer__logo-icon">
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.5" fill="none"/>
-            <path d="M8 8 Q12 10 12 12 Q12 14 16 16" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <circle cx="16" cy="16" r="2" fill="white"/>
-          </svg>
-        </div>
-        <span class="rg-footer__logo-text">Ruto<span>Go</span></span>
+        <img src="assets/images/LOGO_1.png" alt="RutoGo" class="rg-footer__logo-icon" />
+        <span class="rg-footer__logo-text"><span class="rg-pink">Ruto</span><span class="rg-orange">Go</span></span>
       </div>
       <div class="rg-footer__links">
         <a class="rg-footer__link">Sobre nosotros</a>
@@ -37,22 +31,21 @@ import { RouterLink } from '@angular/router';
       border-top: 1px solid var(--rg-border);
     }
     .rg-footer__logo {
-      display: flex; align-items: center; gap: 7px;
+      display: flex; align-items: center; gap: 8px;
     }
     .rg-footer__logo-icon {
-      width: 24px; height: 24px;
-      background: var(--rg-gradient);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      svg { width: 14px; height: 14px; }
+      width: 34px; height: 34px;
+      display: block;
+      object-fit: contain;
     }
     .rg-footer__logo-text {
       font-family: var(--rg-font-head);
       font-weight: 900;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: var(--rg-navy);
-      span { color: var(--rg-pink); }
     }
+    .rg-footer__logo-text .rg-pink { color: var(--rg-pink); }
+    .rg-footer__logo-text .rg-orange { color: var(--rg-orange); }
     .rg-footer__links {
       display: flex;
       gap: 1.5rem;
